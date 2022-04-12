@@ -1,12 +1,12 @@
 import * as React from "react";
 import { RouteProp } from "@react-navigation/core";
 import { FrameNavigationProp } from "react-nativescript-navigation";
-import { MainStackParamList } from "./NavigationParamList";
+import { AuthorisedStackParamList } from "./NavigationParamList";
 import { FlickService } from "../services";
 
 type DetailsScreenProps = {
-  route: RouteProp<MainStackParamList, "Details">;
-  navigation: FrameNavigationProp<MainStackParamList, "Details">;
+  route: RouteProp<AuthorisedStackParamList, "Details">;
+  navigation: FrameNavigationProp<AuthorisedStackParamList, "Details">;
 };
 
 export function DetailsScreen({ route }: DetailsScreenProps) {
@@ -16,7 +16,12 @@ export function DetailsScreen({ route }: DetailsScreenProps) {
   return (
     <scrollView height="100%">
       <stackLayout>
-        <image borderRadius="5" margin="0 10" stretch="aspectFill" src={flick?.image} />
+        <image
+          borderRadius="5"
+          margin="0 10"
+          stretch="aspectFill"
+          src={flick?.image}
+        />
         <stackLayout padding="10 20">
           {flick.details.map((flickDetails, index) => (
             <stackLayout key={index}>

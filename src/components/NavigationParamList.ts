@@ -1,6 +1,11 @@
-export type MainStackParamList = {
-  Home: {}
+export type UnauthorisedStackParamList = {
+  login: {};
+  registration: {};
+};
+
+export type AuthorisedStackParamList = {
+  Home: {};
   Details: {
-    flickId: number
-  }
-}
+    flickId: number;
+  };
+};

@@ -3,13 +3,13 @@ import { ListView } from "react-nativescript";
 import { RouteProp } from "@react-navigation/core";
 import { ItemEventData } from "@nativescript/core";
 import { FrameNavigationProp } from "react-nativescript-navigation";
-import { MainStackParamList } from "./NavigationParamList";
+import { AuthorisedStackParamList } from "./NavigationParamList";
 import { FlickService } from "../services/flick.service";
 import { FlickModel } from "../models";
 
 type HomeScreenProps = {
-  route: RouteProp<MainStackParamList, "Home">;
-  navigation: FrameNavigationProp<MainStackParamList, "Home">;
+  route: RouteProp<AuthorisedStackParamList, "Home">;
+  navigation: FrameNavigationProp<AuthorisedStackParamList, "Home">;
 };
 
 export function HomeScreen({ navigation }: HomeScreenProps) {
