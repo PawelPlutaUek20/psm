@@ -1,4 +1,6 @@
 export type MainStackParamList = {
   Home: {}
-  Secondary: {}
+  Details: {
+    flickId: number
+  }
 }
